@@ -13,5 +13,9 @@ public class PolyDetail {
 
         // 虽然animal的运行类型是Cat，但是其不能直接调用Cat中的方法catchMouse；
         // animal.catchMouse();
+        // 向下转型(强制转型)：将animal向下转型为Cat类型，
+        // 注意：animal必须是指向Cat的对象，也就是说进行向下转型时，被转对象必须是执行目标对象的，才可向下转型，否则会出错
+        Cat cat = (Cat) animal;
+        cat.catchMouse();
     }
 }
