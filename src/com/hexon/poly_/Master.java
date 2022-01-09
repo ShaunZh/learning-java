@@ -16,10 +16,11 @@ public class Master {
     }
 
     // 随着要feed的动物及食物的增加，feed类会变得非常庞大且啰嗦
-    public void feed(Dog dog, Bone bone) {
-        System.out.println("主人" + this.name + "给小狗" + dog.getName() + "喂养" + bone.getName());
+    // update: 使用多态机制来解决主人喂食问题，Animal是动物类的父类，以及Food是食物的父类，它们都可以接收各自的子类，并调用其中方法
+    public void feed(Animal animal, Food food) {
+        System.out.println("主人" + this.name + "给" + animal.getName() + "喂养" + food.getName());
     }
-    public void feed(Cat cat, Fish fish) {
-        System.out.println("主人" + this.name + "给小猫" + fish.getName() + "喂养" + fish.getName());
-    }
+//    public void feed(Cat cat, Fish fish) {
+//        System.out.println("主人" + this.name + "给小猫" + fish.getName() + "喂养" + fish.getName());
+//    }
 }
